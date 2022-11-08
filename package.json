@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "story:dev": "histoire dev",
+    "story:build": "histoire build",
+    "story:preview": "histoire preview"
+  },
+  "devDependencies": {
+    "@histoire/plugin-nuxt": "^0.11.6",
+    "@histoire/plugin-vue": "^0.11.6",
+    "@nuxtjs/tailwindcss": "^6.1.1",
+    "histoire": "^0.11.6",
+    "nuxt": "3.0.0-rc.12",
+    "tailwindcss": "^3.2.1"
+  },
+  "prettier":{
+     "useTabs": false,
+     "tabWidth": 4,
+     "printWidth": 80,
+     "singleQuote": true
+  }
+}
