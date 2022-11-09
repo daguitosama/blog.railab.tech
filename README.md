@@ -1,6 +1,6 @@
 # Railab Blog
 
-## Content Structure
+## Content Types
 
 ```graphql
 
@@ -28,6 +28,8 @@ PostPicture {
 
 Page {
 
+    slug             String
+    
     title            String
     description      String
 
@@ -45,3 +47,15 @@ Page {
 }
 
 ```
+
+## Content Architecture
+
+blog
+    Pages
+        home
+        posts
+        topics
+        authors
+    Posts
+    Authors
+    Topics
