@@ -3,9 +3,7 @@ export default {
 
     setup(props) {
 
-        // 
 
-        // head
 
     },
 };

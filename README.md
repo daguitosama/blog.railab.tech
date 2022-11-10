@@ -36,7 +36,6 @@ Page {
     og-title         String
     og-description   String
     og-image         URL
-    og-site          String
     og-site_name     String
     og-url           URL
 
