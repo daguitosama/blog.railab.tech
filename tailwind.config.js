@@ -29,6 +29,9 @@ module.exports = {
       light: {
         base: '#fff',
         elevation: '#E6E6E6'
+      },
+      dark: {
+        base: '#1D1F22' // apple dark mode solid bg
       }
     },
 
