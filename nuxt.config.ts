@@ -6,7 +6,18 @@ export default defineNuxtConfig({
     ],
     modules: ['@nuxtjs/i18n', '@nuxtjs/tailwindcss'],
 
-    // build:{
-    //     transpile
-    // }
+    i18n: {
+        baseUrl: process.env.ORIGIN ? process.env.ORIGIN : 'https://localhost',
+        locales: [
+            {
+                code: 'en',
+                iso: 'en-US',
+            },
+            {
+                code: 'es',
+                iso: 'es-ES',
+            },
+        ],
+        defaultLocale: 'es',
+    },
 });

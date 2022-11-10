@@ -5,5 +5,10 @@
     "env.d.ts",
     "src/**/*",
     "src/**/*.vue"
-  ]
+  ],
+  "compilerOptions": {
+    "types": [
+      "@nuxtjs/i18n"
+    ]
+  }
 }
