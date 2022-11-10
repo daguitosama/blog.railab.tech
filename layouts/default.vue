@@ -5,6 +5,8 @@ const head = useLocaleHead({
     identifierAttribute: 'id',
     addSeoAttributes: true,
 });
+// learn more
+// console.log({ head: head.value })
 </script>
 <template>
     <div>
