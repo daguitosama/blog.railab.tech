@@ -1,11 +1,10 @@
 {
   "private": true,
   "scripts": {
-    "build": "nuxi build",
-    "start": "nuxi start",
-    "dev": "nuxi dev",
+    "build": "nuxt build",
+    "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxi preview",
+    "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "story:dev": "histoire dev",
     "story:build": "histoire build",
