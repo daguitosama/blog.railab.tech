@@ -32,6 +32,8 @@ module.exports = {
       },
       dark: {
         base: '#1D1F22' // apple dark mode solid bg
+        // google dark mode bg (nice to) 
+        // 202124
       }
     },
 
