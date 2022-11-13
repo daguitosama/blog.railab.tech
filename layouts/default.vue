@@ -34,11 +34,12 @@ const head = useLocaleHead({
  * 
 */
 const {
-    content_meta_data,
+    content_meta_data: page_meta_data,
     navigation_data,
     // post_content_data, 
 } = useContentData();
 
+const { public: { siteName } } = useRuntimeConfig();
 
 
 
@@ -58,19 +59,19 @@ const {
 
             <!-- content metadata -->
             <!-- base -->
-            <Tile> {{ content_meta_data.title }} </Tile>
-            <Meta name="description" :content="content_meta_data.description" />
+            <Title> {{ page_meta_data.title }} </Title>
+            <Meta name="description" :content="page_meta_data.description" />
             <!-- OG -->
-            <Meta property="og:title" :content="content_meta_data.og_title" />
-            <Meta property="og:description" :content="content_meta_data.og_description" />
-            <Meta property="og:image" :content="content_meta_data.og_image" />
-            <Meta property="og:site_name" :content="content_meta_data.og_site_name" />
-            <Meta property="og:url" :content="content_meta_data.og_url" />
+            <Meta property="og:title" :content="page_meta_data.og_title" />
+            <Meta property="og:description" :content="page_meta_data.og_description" />
+            <Meta property="og:image" :content="page_meta_data.og_image" />
+            <Meta property="og:site_name" :content="siteName" />
+            <Meta property="og:url" :content="page_meta_data.og_url" />
             <!-- Twitter -->
-            <Meta property="twitter:card" :content="content_meta_data.twitter_card" />
-            <Meta property="twitter:title" :content="content_meta_data.twitter_title" />
-            <Meta property="twitter:image" :content="content_meta_data.twitter_image" />
-            <Meta property="twitter:site" :content="content_meta_data.twitter_site" />
+            <Meta property="twitter:card" :content="page_meta_data.twitter_card" />
+            <Meta property="twitter:title" :content="page_meta_data.twitter_title" />
+            <Meta property="twitter:image" :content="page_meta_data.twitter_image" />
+            <Meta property="twitter:site" :content="page_meta_data.twitter_site" />
 
 
 
