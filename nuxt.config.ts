@@ -8,7 +8,7 @@ export default defineNuxtConfig({
         /* Fonts */
         '~/assets/css/fonts.css',
     ],
-    modules: ['@nuxtjs/i18n', '@nuxtjs/tailwindcss', '@storyblok/nuxt'],
+    modules: ['@nuxtjs/i18n', '@nuxtjs/tailwindcss'],
 
     i18n: {
         baseUrl: process.env.ORIGIN ? process.env.ORIGIN : 'https://localhost',
@@ -25,12 +25,6 @@ export default defineNuxtConfig({
         defaultLocale: 'es',
     },
 
-    storyblok: {
-        accessToken: process.env.STORYBLOK_ACCESS_TOKEN,
-        bridge: true,
-        apiOptions: { region: 'us' },
-        useApiClient: true,
-    },
     runtimeConfig: {
         public: {
             siteName: process.env?.SITE_NAME || 'localhost',
