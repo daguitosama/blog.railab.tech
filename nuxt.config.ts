@@ -28,6 +28,7 @@ export default defineNuxtConfig({
     runtimeConfig: {
         public: {
             siteName: process.env?.SITE_NAME || 'localhost',
+            twitterSite: process.env?.TWITTER_SITE || '',
         },
     },
 });

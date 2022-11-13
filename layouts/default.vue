@@ -3,6 +3,9 @@
 /**
  * I18n Meta Data
  */
+
+import { computed } from '@vue/reactivity';
+
 // https://v8.i18n.nuxtjs.org/guide/seo/
 const head = useLocaleHead({
     addDirAttribute: true,
@@ -10,7 +13,9 @@ const head = useLocaleHead({
     addSeoAttributes: true,
 });
 // learn more
-// console.log({ head: head.value })
+console.log({ head: head.value });
+// canonical
+const canonical = computed(() => head.value?.link.filter(link => link.rel == 'canonical')[0].href)
 
 /** Content Metadata 
  * 
@@ -37,9 +42,9 @@ const {
     page_meta_data,
     navigation_data,
     // post_content_data, 
-} = useContentData();
+} = useStoryBlockData();
 
-const { public: { siteName } } = useRuntimeConfig();
+const { public: { siteName, twitterSite } } = useRuntimeConfig();
 
 
 
@@ -62,17 +67,17 @@ const { public: { siteName } } = useRuntimeConfig();
             <Title> {{ page_meta_data.title }} </Title>
             <Meta name="description" :content="page_meta_data.description" />
             <!-- OG -->
-            <Meta property="og:title" :content="page_meta_data.og_title" />
-            <Meta property="og:description" :content="page_meta_data.og_description" />
-            <Meta property="og:image" :content="page_meta_data.og_image" />
+            <Meta property="og:title" :content="page_meta_data.title" />
+            <Meta property="og:description" :content="page_meta_data.description" />
+            <Meta property="og:image" :content="page_meta_data.image" />
             <Meta property="og:site_name" :content="siteName" />
             <!-- clone canonical -->
-            <Meta property="og:url" :content="page_meta_data.og_url" />
+            <Meta property="og:url" :content="canonical" />
             <!-- Twitter -->
-            <Meta property="twitter:card" :content="page_meta_data.twitter_card" />
-            <Meta property="twitter:title" :content="page_meta_data.twitter_title" />
-            <Meta property="twitter:image" :content="page_meta_data.twitter_image" />
-            <Meta property="twitter:site" :content="page_meta_data.twitter_site" />
+            <Meta property="twitter:card" content="summary_large_image" />
+            <Meta property="twitter:title" :content="page_meta_data.title" />
+            <Meta property="twitter:image" :content="page_meta_data.image" />
+            <Meta property="twitter:site" :content="twitterSite" />
 
 
 
