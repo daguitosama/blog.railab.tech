@@ -1,0 +1,18 @@
+{
+    ##
+    # Authors
+    ##
+    AuthorItems {
+        total
+        items {
+            uuid
+            full_slug
+            content {
+                name
+                twitter
+                bio
+                avatar
+            }
+        }
+    }
+}

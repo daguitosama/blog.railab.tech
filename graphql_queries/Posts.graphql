@@ -1,0 +1,22 @@
+{
+    ##
+    # Posts
+    ##
+    PostItems {
+        total
+        items {
+            created_at
+            first_published_at
+            full_slug
+            content {
+                tilte
+                description
+                author {
+                    fullSlug
+                    name
+                    content
+                }
+            }
+        }
+    }
+}

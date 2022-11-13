@@ -1,0 +1,33 @@
+{
+    "data": {
+        "PostItems": {
+            "total": 1,
+            "items": [
+                {
+                    "created_at": "2022-11-13T02:09:18.418Z",
+                    "first_published_at": "2022-11-13T02:34:03.557Z",
+                    "full_slug": "blog/posts/making-storyblok-happen-where-you-live",
+                    "content": {
+                        "tilte": "Making Storyblok happen where do you live",
+                        "description": "My first article on Storyblok",
+                        "author": {
+                            "fullSlug": "blog/authors/dago-a-carralero",
+                            "name": "Dago A Carralero",
+                            "content": {
+                                "bio": "Dog father, web freelancer, coffee enthusiast.",
+                                "img": "",
+                                "_uid": "7a4d1ced-36c9-4825-809b-dabf908fc2ab",
+                                "name": "Dago A Carralero",
+                                "avatar": "//a-us.storyblok.com/f/1002127/460x460/7c427e7aa9/dago-avatar.png",
+                                "twitter": "daguitosama",
+                                "alt_text": "",
+                                "component": "author",
+                                "_editable": "<!--#storyblok#{\"name\": \"author\", \"space\": \"1002127\", \"uid\": \"7a4d1ced-36c9-4825-809b-dabf908fc2ab\", \"id\": \"7972\"}-->"
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "AuthorItems": {
+        "total": 1,
+        "items": [
+            {
+                "uuid": "e08b8b77-ff41-48f9-9067-bf75584ae586",
+                "full_slug": "blog/authors/dago-a-carralero",
+                "content": {
+                    "name": "Dago A Carralero",
+                    "twitter": "daguitosama",
+                    "bio": "Dog father, web freelancer, coffee enthusiast.",
+                    "avatar": "//a-us.storyblok.com/f/1002127/460x460/7c427e7aa9/dago-avatar.png"
+                }
+            }
+        ]
+    }
+}

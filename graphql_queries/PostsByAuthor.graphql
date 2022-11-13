@@ -1,0 +1,21 @@
+{
+    ##
+    # Posts by Author
+    # filter by author uuid
+    # exapmple Dago id is e08b8b77-ff41-48f9-9067-bf75584ae586
+    ##
+    PostItems(
+        filter_query: { author: { in: "e08b8b77-ff41-48f9-9067-bf75584ae586" } }
+    ) {
+        total
+        items {
+            full_slug
+            created_at
+            first_published_at
+            content {
+                tilte
+                description
+            }
+        }
+    }
+}
