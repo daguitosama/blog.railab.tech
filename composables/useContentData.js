@@ -1,6 +1,6 @@
 export function useContentData() {
     return {
-        content_meta_data: {
+        page_meta_data: {
             // base
             title: '',
             description: '',

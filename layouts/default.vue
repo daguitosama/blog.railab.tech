@@ -34,7 +34,7 @@ const head = useLocaleHead({
  * 
 */
 const {
-    content_meta_data: page_meta_data,
+    page_meta_data,
     navigation_data,
     // post_content_data, 
 } = useContentData();
@@ -66,6 +66,7 @@ const { public: { siteName } } = useRuntimeConfig();
             <Meta property="og:description" :content="page_meta_data.og_description" />
             <Meta property="og:image" :content="page_meta_data.og_image" />
             <Meta property="og:site_name" :content="siteName" />
+            <!-- clone canonical -->
             <Meta property="og:url" :content="page_meta_data.og_url" />
             <!-- Twitter -->
             <Meta property="twitter:card" :content="page_meta_data.twitter_card" />
