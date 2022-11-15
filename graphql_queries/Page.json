@@ -1,0 +1,16 @@
+{
+    "data": {
+        "PageItem": {
+            "full_slug": "blog/pages/home",
+            "created_at": "2022-11-13T07:41:21.691Z",
+            "first_published_at": "2022-11-13T07:42:20.050Z",
+            "name": "home",
+            "content": {
+                "title": "Foo",
+                "description": "Bar",
+                "image": "//a-us.storyblok.com/f/1002127/2048x1760/cb4246951d/macbook.jpg",
+                "body": []
+            }
+        }
+    }
+}

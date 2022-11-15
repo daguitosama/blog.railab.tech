@@ -29,6 +29,8 @@ export default defineNuxtConfig({
         public: {
             siteName: process.env?.SITE_NAME || 'localhost',
             twitterSite: process.env?.TWITTER_SITE || '',
+            storyblokApiUrl: process.env.STORYBLOK_API_URL,
+            storyblockAccessToken: process.env.STORYBLOK_ACCESS_TOKEN,
         },
     },
 });

@@ -1,0 +1,18 @@
+{
+    ##
+    # Pages
+    ##
+    PageItems {
+        total
+        items {
+            name
+            slug
+
+            created_at
+            first_published_at
+
+            full_slug
+            lang
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    PageItem(id: "blog/pages/home") {
+        full_slug
+        created_at
+        first_published_at
+
+        name
+        content {
+            title
+            description
+            image
+            body
+        }
+    }
+}

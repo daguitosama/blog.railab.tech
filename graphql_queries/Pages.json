@@ -1,0 +1,25 @@
+{
+    "data": {
+        "PageItems": {
+            "total": 1,
+            "items": [
+                {
+                    "name": "home",
+                    "slug": "home",
+                    "created_at": "2022-11-13T07:41:21.691Z",
+                    "first_published_at": "2022-11-13T07:42:20.050Z",
+                    "full_slug": "blog/pages/home",
+                    "lang": "default",
+                    "meta_data": null,
+                    "path": null,
+                    "content": {
+                        "_editable": "<!--#storyblok#{\"name\": \"page\", \"space\": \"1002127\", \"uid\": \"186cdbf0-8668-417e-9209-8a07dabf42c5\", \"id\": \"7975\"}-->",
+                        "_uid": "186cdbf0-8668-417e-9209-8a07dabf42c5",
+                        "body": [],
+                        "component": "page"
+                    }
+                }
+            ]
+        }
+    }
+}

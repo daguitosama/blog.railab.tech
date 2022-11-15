@@ -5,7 +5,7 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt build && nuxt preview",
-    "preview:cfw": "NITRO_PRESET=cloudflare p build && wdl --port 3000",
+    "preview:cfw": "NITRO_PRESET=cloudflare pnpm build && wrangler dev --local --port 3000",
     "postinstall": "nuxt prepare",
     "story:dev": "histoire dev",
     "story:build": "histoire build",

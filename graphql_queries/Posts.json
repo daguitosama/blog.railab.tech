@@ -1,31 +1,43 @@
 {
-    "PostItems": {
-        "total": 1,
-        "items": [
-            {
-                "created_at": "2022-11-13T02:09:18.418Z",
-                "first_published_at": "2022-11-13T02:34:03.557Z",
-                "full_slug": "blog/posts/making-storyblok-happen-where-you-live",
-                "content": {
-                    "tilte": "Making Storyblok happen where do you live",
-                    "description": "My first article on Storyblok",
-                    "author": {
-                        "fullSlug": "blog/authors/dago-a-carralero",
-                        "name": "Dago A Carralero",
-                        "content": {
-                            "bio": "Dog father, web freelancer, coffee enthusiast.",
-                            "img": "",
-                            "_uid": "7a4d1ced-36c9-4825-809b-dabf908fc2ab",
+    "data": {
+        "PostItems": {
+            "total": 1,
+            "items": [
+                {
+                    "created_at": "2022-11-13T02:09:18.418Z",
+                    "first_published_at": "2022-11-13T02:34:03.557Z",
+                    "full_slug": "blog/posts/making-storyblok-happen-where-you-live",
+                    "content": {
+                        "tilte": "Making Storyblok happen where do you live",
+                        "description": "My first article on Storyblok",
+                        "page_meta_data": [
+                            {
+                                "_uid": "2653ae12-5e37-47b6-b40a-c29e383d5995",
+                                "image": "//a-us.storyblok.com/f/1002127/x/85c66b3f6b/storyblok.svg",
+                                "title": "Making Storyblok happen where do you live",
+                                "component": "page_meta_data",
+                                "description": "My first ever article on Storyblok, about Storyblok why not ha.",
+                                "_editable": "<!--#storyblok#{\"name\": \"page_meta_data\", \"space\": \"1002127\", \"uid\": \"2653ae12-5e37-47b6-b40a-c29e383d5995\", \"id\": \"7971\"}-->"
+                            }
+                        ],
+                        "author": {
+                            "fullSlug": "blog/authors/dago-a-carralero",
                             "name": "Dago A Carralero",
-                            "avatar": "//a-us.storyblok.com/f/1002127/460x460/7c427e7aa9/dago-avatar.png",
-                            "twitter": "daguitosama",
-                            "alt_text": "",
-                            "component": "author",
-                            "_editable": "<!--#storyblok#{\"name\": \"author\", \"space\": \"1002127\", \"uid\": \"7a4d1ced-36c9-4825-809b-dabf908fc2ab\", \"id\": \"7972\"}-->"
+                            "content": {
+                                "bio": "Dog father, web freelancer, coffee enthusiast.",
+                                "img": "",
+                                "_uid": "7a4d1ced-36c9-4825-809b-dabf908fc2ab",
+                                "name": "Dago A Carralero",
+                                "avatar": "//a-us.storyblok.com/f/1002127/460x460/7c427e7aa9/dago-avatar.png",
+                                "twitter": "daguitosama",
+                                "alt_text": "",
+                                "component": "author",
+                                "_editable": "<!--#storyblok#{\"name\": \"author\", \"space\": \"1002127\", \"uid\": \"7a4d1ced-36c9-4825-809b-dabf908fc2ab\", \"id\": \"7972\"}-->"
+                            }
                         }
                     }
                 }
-            }
-        ]
+            ]
+        }
     }
 }

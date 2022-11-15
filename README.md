@@ -29,7 +29,7 @@ PostPicture {
 Page {
 
     slug             String
-    
+
     title            String
     description      String
 
@@ -47,14 +47,46 @@ Page {
 
 ```
 
-## Content Architecture
+## Component Architecure
 
-blog
-    Pages
-        home
-        posts
-        topics
-        authors
-    Posts
-    Authors
-    Topics
+### Page_Metadata
+
+```js
+    title: '',
+    description: ''
+    image: ''
+```
+
+## Content fetching & hydration plan
+
+aproach-1
+Keep a structure of the relation of content-section: {value, query}
+
+```js
+const content_query_map = {
+    home: {
+        value: {},
+        query: '',
+    },
+    navigation: {
+        value: {},
+        query: '',
+    },
+};
+```
+
+When attempt to load from a page craft the global query by:
+- injecting in it all non initialized content sections (the ones with value == nul)
+- injecting fresh required content-keys (page_meta_data)
+
+aproach-2
+define several (page based) functions for fetch data, for instance: 
+
+```js 
+// /home
+fetchContent('/home');
+
+// author
+fetchContent('/authors')
+
+```

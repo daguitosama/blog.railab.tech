@@ -11,6 +11,7 @@
             content {
                 tilte
                 description
+                page_meta_data
                 author {
                     fullSlug
                     name
