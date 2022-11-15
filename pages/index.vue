@@ -3,6 +3,8 @@
 const content = useContent();
 const home = computed(() => content.value.home)
 const { fetchContent } = useFetchContent('home')
+const { version } = useContentVersion();
+
 await useAsyncData('home-content', async () => {
     try {
         await fetchContent()

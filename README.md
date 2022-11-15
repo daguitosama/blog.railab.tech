@@ -47,9 +47,11 @@ Page {
 
 ```
 
-## Component Architecure
+### Stroyblock components content structure (contentSchema)
 
-### Page_Metadata
+
+
+#### Page_Metadata
 
 ```js
     title: '',
@@ -57,36 +59,12 @@ Page {
     image: ''
 ```
 
-## Content fetching & hydration plan
 
-aproach-1
-Keep a structure of the relation of content-section: {value, query}
+## Hot Zone
 
-```js
-const content_query_map = {
-    home: {
-        value: {},
-        query: '',
-    },
-    navigation: {
-        value: {},
-        query: '',
-    },
-};
-```
+- [x] Make a composable for the content version (published or draft) to dynamically change in the fetchStoryblok hook
 
-When attempt to load from a page craft the global query by:
-- injecting in it all non initialized content sections (the ones with value == nul)
-- injecting fresh required content-keys (page_meta_data)
-
-aproach-2
-define several (page based) functions for fetch data, for instance: 
-
-```js 
-// /home
-fetchContent('/home');
-
-// author
-fetchContent('/authors')
-
-```
+- [] Make a global middleware to set the version based on a `content-version` cookie
+- [x] Make a simple mechanism to toogle the content versions (privacy in mind)
+  - Version selector route with a password query to match and them allow to select the content version
+    - make a cookie for enable content version selection & another cookie for the content version

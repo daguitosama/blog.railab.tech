@@ -32,5 +32,7 @@ export default defineNuxtConfig({
             storyblokApiUrl: process.env.STORYBLOK_API_URL,
             storyblockAccessToken: process.env.STORYBLOK_ACCESS_TOKEN,
         },
+        contentVersionSelectorPassword:
+            process.env.CONTENT_VERSION_SELECTOR_PASSWORD || 'supper-foo-pass',
     },
 });

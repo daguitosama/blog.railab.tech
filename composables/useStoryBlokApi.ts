@@ -3,7 +3,10 @@ export function useStoryblokApi() {
         public: { storyblockAccessToken, storyblokApiUrl },
     } = useRuntimeConfig();
     return {
-        async fetchStoryblokContent(query: string, variables: object = {}) {
+        async fetchStoryblokContent(
+            query: string,
+            variables: object = { version: 'draft' || 'published' }
+        ) {
             console.log({ query });
 
             const { data, errors } = await (

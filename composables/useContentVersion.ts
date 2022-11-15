@@ -4,5 +4,10 @@ export function useContentVersion() {
     return {
         version,
         AVAILABLE_VERSIONS,
+        cookieKey: 'content-version',
+        versionKeys: {
+            draft: 'draft',
+            published: 'published',
+        },
     };
 }
