@@ -1,5 +1,4 @@
 /** Querys */
-import { countReset } from 'console';
 import {
     query as homeQuery,
     queryName as homeQueryName,
@@ -9,7 +8,11 @@ import {
 // import {navigationQuery} from graphqlQuerys;
 
 /** A Composable to encapsulate all content querys and data hydration from storyblok api */
-export function useFetchContent(contentSec: string, options: {}) {
+export function useFetchContent(
+    contentSec: string,
+    // for more complex querys like pagination & stuff
+    options: {}
+) {
     // console.log({ contentSec });
 
     const content = useContent();
@@ -95,9 +98,10 @@ export function useFetchContent(contentSec: string, options: {}) {
         // level, the place where load is actually trigger
         // but we need to make sure that the fetching plan queues
         // allways gets clean no mather what
+        const { version } = useContentVersion();
         try {
             const { data } = await fetchStoryblokContent(query, {
-                version: 'published', // todo make this a user option
+                version: version.value, // todo make this a user option
             });
             // on query success handle data hydratations
             processors_to_use.forEach((p) => p(data));
