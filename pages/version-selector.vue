@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import { localePath } from 'vue-i18n-routing';
+
 const { version, AVAILABLE_VERSIONS, cookieKey } = useContentVersion();
 const route = useRoute();
 const allow_content_version_selection = ref(false);
 const selected_content_version = ref(AVAILABLE_VERSIONS[0]);
-
+// const { loca} = useI18n();
 // cookies
 const content_version_selection_enabled = useCookie(
     'content_version_selection_enabled'
@@ -44,9 +46,14 @@ function setContentVersion() {
 </script>
 
 <template>
-    <div class="p-16 max-w-xl mx-auto">
+    <Head>
+        <Title> Content version selector </Title>
+    </Head>
+    <div class="p-16 max-w-xl mx-auto text-center">
         <div v-if="allow_content_version_selection">
-            <h1 class="text-4xl font-semibold">Content version selector</h1>
+            <h1 class="text-3xl md:text-4xl font-semibold">
+                Content version selector
+            </h1>
             <p class="mt-4">
                 <span>Currently using version: </span>
                 <span>
@@ -55,13 +62,14 @@ function setContentVersion() {
                     </em>
                 </span>
             </p>
+
             <form
                 @submit.prevent="setContentVersion"
-                class="mt-20 border rounded-xl p-8"
+                class="mt-20 border rounded-xl p-8 text-center"
             >
                 <label
                     for="content-version-selector"
-                    class="block w-full text-2xl font-semibold"
+                    class="block w-full text-xl font-semibold"
                     >Select a content version</label
                 >
                 <select
@@ -79,13 +87,19 @@ function setContentVersion() {
                 </select>
                 <div class="mt-8">
                     <button
-                        class="bg-primary-on-light-base text-white px-4 py-2 rounded-2xl"
+                        class="bg-primary-on-light-base text-white px-6 py-2 rounded-xl shadow-lg"
                         type="submit"
                     >
                         Use version
                     </button>
                 </div>
             </form>
+
+            <div class="mt-10">
+                <NuxtLink to="/">
+                    Go home <span aria-hidden="true">-></span></NuxtLink
+                >
+            </div>
         </div>
         <div v-else>
             <h1 class="font-extrabold text-3xl">This is a private area</h1>
