@@ -61,7 +61,6 @@ onKeyStroke('Escape', () => {
 // closing menu on route change
 const router = useRouter();
 router.beforeEach(() => closeSecuence());
-// console.log({ router });
 </script>
 
 <template>
