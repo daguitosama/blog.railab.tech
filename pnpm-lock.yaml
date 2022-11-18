@@ -5,6 +5,7 @@ specifiers:
   '@histoire/plugin-vue': ^0.11.6
   '@nuxtjs/i18n': 8.0.0-beta.4
   '@nuxtjs/tailwindcss': ^6.1.3
+  '@vueuse/core': ^9.5.0
   '@vueuse/integrations': ^9.5.0
   focus-trap: ^7.1.0
   histoire: ^0.11.6
@@ -18,6 +19,7 @@ devDependencies:
   '@histoire/plugin-nuxt': 0.11.6_wvnr52xbqrkhxamfeiemyxqmqa
   '@histoire/plugin-vue': 0.11.6_histoire@0.11.6
   '@nuxtjs/tailwindcss': 6.1.3
+  '@vueuse/core': 9.5.0
   '@vueuse/integrations': 9.5.0_focus-trap@7.1.0
   focus-trap: 7.1.0
   histoire: 0.11.6

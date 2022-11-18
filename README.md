@@ -49,7 +49,33 @@ Page {
 
 ### Stroyblock components content structure (contentSchema)
 
-
+### Navigation
+```js
+const navitation = {
+    links : [
+        {
+            text: 'Home',,
+            route: '/'
+        },
+        {
+            text: 'Posts',
+            route: '/posts'
+        }
+        {
+            text: 'Topics',
+            route: '/topics'
+        },
+        {
+            text: 'Authors',
+            route: '/authors'
+        }
+    ],
+    externalLink : {
+        text: 'Go to Railab',
+        url: 'https://railab.tech'
+    }
+}
+```
 
 #### Page_Metadata
 
@@ -64,7 +90,7 @@ Page {
 
 - [x] Make a composable for the content version (published or draft) to dynamically change in the fetchStoryblok hook
 
-- [] Make a global middleware to set the version based on a `content-version` cookie
+- [x] Make a global middleware to set the version based on a `content-version` cookie
 - [x] Make a simple mechanism to toogle the content versions (privacy in mind)
   - Version selector route with a password query to match and them allow to select the content version
     - make a cookie for enable content version selection & another cookie for the content version

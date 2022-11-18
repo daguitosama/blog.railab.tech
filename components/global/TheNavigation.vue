@@ -2,7 +2,24 @@
 const props = defineProps({
     links: {
         type: Array,
-        default: () => [{ text: 'Foo', route: '/foo' }],
+        default: () => [
+            {
+                text: 'Home',
+                route: '/',
+            },
+            {
+                text: 'Posts',
+                route: '/posts',
+            },
+            {
+                text: 'Topics',
+                route: '/topics',
+            },
+            {
+                text: 'Authors',
+                route: '/authors',
+            },
+        ],
     },
     externalLink: {
         text: 'Go to Railab',

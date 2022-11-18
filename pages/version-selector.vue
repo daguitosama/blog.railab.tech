@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { localePath } from 'vue-i18n-routing';
+// import { localePath } from 'vue-i18n-routing';
 
 const { version, AVAILABLE_VERSIONS, cookieKey } = useContentVersion();
 const route = useRoute();

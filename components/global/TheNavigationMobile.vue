@@ -1,5 +1,6 @@
 <script setup>
 import { useFocusTrap } from '@vueuse/integrations/useFocusTrap';
+import { onKeyStroke } from '@vueuse/core';
 
 // props
 const props = defineProps({
@@ -24,25 +25,43 @@ const isMenuOpen = ref(false);
 const controlsId = 'mobile-navigation-menu';
 const { showOverflow, hideOverflow } = useOverflow();
 
-// todo focus first menu link
-// prevent tab on menu links
+// state toogle
 function toogleMenuState() {
     if (!isMenuOpen.value) {
-        // hide boddy overflow to
-        // tell browser to use it on
-        // this menu layer
-        hideOverflow();
-        isMenuOpen.value = true;
-        // active focus trap
-        activate();
+        openSecuence();
     } else {
-        // show the body overflow again
-        showOverflow();
-        isMenuOpen.value = false;
-        // deactivate focus trap
-        deactivate();
+        closeSecuence();
     }
 }
+
+function openSecuence() {
+    // hide boddy overflow to
+    // tell browser to use it on
+    // this menu layer
+    hideOverflow();
+    isMenuOpen.value = true;
+    // active focus trap
+    activate();
+}
+
+function closeSecuence() {
+    // show the body overflow again
+    showOverflow();
+    isMenuOpen.value = false;
+    // deactivate focus trap
+    deactivate();
+}
+// esc key handling
+onKeyStroke('Escape', () => {
+    if (isMenuOpen.value) {
+        closeSecuence();
+    }
+});
+
+// closing menu on route change
+const router = useRouter();
+router.beforeEach(() => closeSecuence());
+// console.log({ router });
 </script>
 
 <template>
@@ -50,6 +69,7 @@ function toogleMenuState() {
         <!-- nav bar -->
         <div
             class="px-[30px] py-[16px] flex items-center justify-between relative z-50 bg-white"
+            :class="{ 'fixed top-0 left-0 w-full': !isMenuOpen || isMenuOpen }"
         >
             <TheLogo />
             <TheNavigationMobileHamburgerButton

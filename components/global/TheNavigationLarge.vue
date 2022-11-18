@@ -5,5 +5,5 @@ export default {
 </script>
 
 <template>
-    <div></div>
+    <div>The Navigation Large</div>
 </template>
