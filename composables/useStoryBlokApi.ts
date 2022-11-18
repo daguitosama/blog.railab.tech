@@ -7,7 +7,7 @@ export function useStoryblokApi() {
             query: string,
             variables: object = { version: 'draft' || 'published' }
         ) {
-            console.log({ query });
+            // console.log({ query });
 
             const { data, errors } = await (
                 await fetch(storyblokApiUrl, {
