@@ -19,14 +19,12 @@ const props = defineProps({
 </script>
 
 <template>
-    <li
-        class="px-[30px] py-[15px] text-4xl font-bold leading-none text-type-on-light-base hover:text-primary-on-light-base hover:underline active:text-primary-on-light-base"
-        :class="{ 'underline text-primary-on-light-base': isCurrent }"
-    >
+    <li class="px-[30px] py-[15px] text-4xl font-bold leading-none">
         <NuxtLink
             :to="localePath(link.route)"
             :tabindex="isReachable ? 0 : -1"
-            class="focus:outline-none focus:ring-2 focus:ring-black rounded-lg"
+            class="focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-4 focus-visible:ring-black rounded-lg text-type-on-light-base hover:text-primary-on-light-base hover:underline active:text-primary-on-light-base"
+            :class="{ 'underline text-primary-on-light-base': isCurrent }"
         >
             {{ link.text }}</NuxtLink
         >
