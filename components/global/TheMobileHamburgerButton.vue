@@ -15,7 +15,7 @@
             class="relative mx-auto w-[24px] h-[24px] flex flex-col items-center justify-center"
         >
             <div
-                class="w-[16px] h-[2px] rounded-lg bg-black/80 absolute transition-transform duration-300"
+                class="w-[16px] h-[2px] rounded-lg bg-black/80 absolute transition-transform duration-300 ease-[cubic-bezier(0.52,0.16,0.52,0.84)]"
                 :class="{
                     'rotate-45  translate-y-[0px]': isOpen,
                     '-translate-y-[3px]': !isOpen,
@@ -24,7 +24,7 @@
 
             <div
                 v-if="true"
-                class="w-[16px] h-[2px] rounded-lg bg-black/80 absolute transition-transform duration-300"
+                class="w-[16px] h-[2px] rounded-lg bg-black/80 absolute transition-transform duration-300 ease-[cubic-bezier(0.52,0.16,0.52,0.84)]"
                 :class="{
                     '-rotate-45 translate-y-[0px]': isOpen,
                     'translate-y-[3px]': !isOpen,
