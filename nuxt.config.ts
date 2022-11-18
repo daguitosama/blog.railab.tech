@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
     experimental: {
         inlineSSRStyles: true,
-        noScripts: true,
+        // noScripts: true,
     },
     css: [
         /* Fonts */
