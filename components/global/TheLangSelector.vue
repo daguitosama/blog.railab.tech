@@ -7,8 +7,10 @@ const props = defineProps({
 </script>
 
 <template>
-    <button class="px-[15px] flex items-center justify-between gap-[10px]">
-        <span><WorldIcon class="w-5 h-5" /></span>
+    <button class="px-[15px] flex items-baseline justify-between gap-[10px]">
+        <span class="flex items-center justify-center h-full relative"
+            ><WorldIcon class="w-[18px] h-[18px] translate-y-[3px]"
+        /></span>
         <span>English</span>
     </button>
 </template>
