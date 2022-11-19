@@ -29,6 +29,8 @@ const {
 function onError(error) {
     console.error(error);
 }
+
+const route = useRoute();
 </script>
 <template>
     <div>
@@ -94,6 +96,14 @@ function onError(error) {
                 <Body>
                     <!-- TODO hydrate with real content :navigation_data="navigation_data" -->
                     <TheNavigation />
+                    <div class="px-[30px]">
+                        <pre
+                            class="p-4 rounded-lg bg-slate-200 overflow-x-scroll"
+                        >
+                        {{localePath('/posts')}}
+                        <br><code>{{ route }}</code>
+                    </pre>
+                    </div>
                     <slot />
                 </Body>
             </NuxtErrorBoundary>
