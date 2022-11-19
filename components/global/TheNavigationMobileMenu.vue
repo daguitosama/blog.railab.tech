@@ -35,10 +35,19 @@ const props = defineProps({
             >
                 <ul :id="controlsId" class="pt-[40px] grid gap-[10px]">
                     <template v-for="link in links">
+                        <!-- isCurrent: case when route ends with '/' or not and is just '/' -->
                         <NavigationMobileMenuLink
                             :link="link"
                             :isReachable="isOpen ? true : false"
-                            :isCurrent="route.path == link.route"
+                            :isCurrent="
+                                route.path.endsWith('/') &&
+                                route.path.length > 1
+                                    ? route.path.substring(
+                                          0,
+                                          route.path.length - 1
+                                      ) == localePath(link.route)
+                                    : route.path == localePath(link.route)
+                            "
                         />
                     </template>
 
