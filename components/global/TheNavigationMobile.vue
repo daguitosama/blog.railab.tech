@@ -9,8 +9,11 @@ const props = defineProps({
         default: () => [{ text: 'Foo', route: '/foo' }],
     },
     externalLink: {
-        text: 'Go to Railab',
-        url: 'https://railab.tech',
+        type: Object,
+        default: () => ({
+            text: 'Go to Railab',
+            url: 'https://railab.tech',
+        }),
     },
 });
 
