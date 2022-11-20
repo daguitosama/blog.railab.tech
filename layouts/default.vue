@@ -93,7 +93,7 @@ function onError(error) {
 
                 <Body>
                     <!-- TODO hydrate with real content :navigation_data="navigation_data" -->
-                    <TheNavigation />
+                    <TheNavigationProvider />
 
                     <slot />
                 </Body>
