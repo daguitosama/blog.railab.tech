@@ -22,13 +22,22 @@ export default defineNuxtConfig({
             {
                 code: 'en',
                 iso: 'en-US',
+                name: 'English',
                 // file: 'en-US.json',
             },
             {
                 code: 'es',
                 iso: 'es-ES',
+                name: 'Español',
                 // file: 'es-ES.json',
             },
+            // temp
+            // {
+            //     code: 'fr',
+            //     iso: 'fr-FR',
+            //     name: 'French',
+            //     // file: 'es-ES.json',
+            // },
         ],
     },
 
