@@ -12,17 +12,24 @@ export default defineNuxtConfig({
 
     i18n: {
         baseUrl: process.env.ORIGIN ? process.env.ORIGIN : 'https://localhost',
+        defaultLocale: 'es',
+        // langDir: 'content',
+        lazy: true,
+        vueI18n: {
+            legacy: false,
+        },
         locales: [
             {
                 code: 'en',
                 iso: 'en-US',
+                // file: 'en-US.json',
             },
             {
                 code: 'es',
                 iso: 'es-ES',
+                // file: 'es-ES.json',
             },
         ],
-        defaultLocale: 'es',
     },
 
     runtimeConfig: {

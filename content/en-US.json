@@ -1,0 +1,26 @@
+{
+    "navigation": {
+        "links": [
+            {
+                "text": "Home",
+                "route": "/"
+            },
+            {
+                "text": "Posts",
+                "route": "/posts"
+            },
+            {
+                "text": "Topics",
+                "route": "/topics"
+            },
+            {
+                "text": "Authors",
+                "route": "/authors"
+            }
+        ],
+        "externalLink": {
+            "text": "Go to Railab",
+            "route": "https://railab.tech"
+        }
+    }
+}
