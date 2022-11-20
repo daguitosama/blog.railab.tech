@@ -1,4 +1,8 @@
 <script setup>
+definePageMeta({
+    layout: 'blog',
+});
+
 const content = useContent();
 const home = computed(() => content.value.home);
 const { fetchContent } = useFetchContent('home');
