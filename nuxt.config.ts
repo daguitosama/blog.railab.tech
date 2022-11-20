@@ -14,7 +14,7 @@ export default defineNuxtConfig({
         baseUrl: process.env.ORIGIN ? process.env.ORIGIN : 'https://localhost',
         defaultLocale: 'es',
         // langDir: 'content',
-        lazy: true,
+        // lazy: true,
         vueI18n: {
             legacy: false,
         },
