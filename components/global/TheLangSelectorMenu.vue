@@ -1,5 +1,4 @@
 <script setup>
-import WorldIcon from '~/components/icons/WorldIcon.vue';
 import XIcon from '~/components/icons/XIcon.vue';
 
 import {
@@ -10,39 +9,16 @@ import {
     DialogTitle,
 } from '@headlessui/vue';
 
-// props
-const props = defineProps({
-    onClick: {
-        type: Function,
-    },
-});
+const isOpen = useLangSelectorState();
 
-// btn
-const isOpen = ref(false); // shared
-const { locale, localeProperties, locales } = useI18n();
-const availableLocales = computed(() =>
-    locales.value.filter((l) => l.code != locale.value)
-);
-const labels = {
-    en: 'Open Language Selector',
-    es: 'Abrir el selector de lenguaje',
-};
-const label = computed(() => labels[locale.value]);
-
-//
-
-// menu
 function closeModal() {
     isOpen.value = false;
 }
-function openModal() {
-    isOpen.value = true;
-}
 
-function onBTNClick() {
-    props.onClick ? props.onClick() : '';
-    openModal();
-}
+const { locale, locales } = useI18n();
+const availableLocales = computed(() =>
+    locales.value.filter((l) => l.code != locale.value)
+);
 
 // menu content
 const titles = {
@@ -57,22 +33,20 @@ const closeLabels = {
 const closeLabel = computed(() => closeLabels[locale.value]);
 
 //
+// closing menu on route change
+// const router = useRouter();
+// router.beforeEach(() => {
+//     console.log('route change');
+//     if (isOpen.value) {
+//         closeModal();
+//     }
+// });
 </script>
 
 <template>
-    <!-- btn to open the menu -->
-    <button
-        @click="onBTNClick()"
-        :aria-label="label"
-        class="px-[15px] py-[10px] rounded-lg flex items-center justify-between gap-[12px] text-sm border border-black focus-visible:outline focus-visible:ring-offset-2 focus-visible:ring-black focus-visible:ring-2 hover:bg-light-elevation focus:bg-light-elevation transition-all duration-200"
-    >
-        <WorldIcon class="" aria-hidden="true" />
-        <span>{{ localeProperties.name }}</span>
-    </button>
-
     <!-- menu -->
     <TransitionRoot appear :show="isOpen" as="template">
-        <Dialog as="div" @close="closeModal" class="relative z-10">
+        <Dialog as="div" @close="closeModal" class="relative z-50">
             <TransitionChild
                 as="template"
                 enter="duration-300 ease-out"
@@ -83,7 +57,7 @@ const closeLabel = computed(() => closeLabels[locale.value]);
                 leave-to="opacity-0"
             >
                 <div
-                    class="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-md z-0"
+                    class="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-md"
                 />
             </TransitionChild>
 
@@ -129,12 +103,12 @@ const closeLabel = computed(() => closeLabels[locale.value]);
                                     <li
                                         v-for="locale in availableLocales"
                                         :key="locale.code"
+                                        @click="() => console.log('click')"
                                     >
                                         <NuxtLink
-                                            @click.native="closeModal"
                                             :to="switchLocalePath(locale.code)"
                                             class="w-full block border-black/40 border rounded-xl p-[15px] focus:outline-none focus-visible:ring-2 focus-visible:ring-black"
-                                            >{{ locale.name }}</NuxtLink
+                                            >{{ locale.name }} foo</NuxtLink
                                         >
                                     </li>
                                 </ul>

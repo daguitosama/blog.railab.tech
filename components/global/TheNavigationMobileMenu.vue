@@ -18,6 +18,10 @@ const props = defineProps({
         default: false,
     },
 });
+const emit = defineEmits(['close']);
+function closeMenu() {
+    emit('close');
+}
 </script>
 
 <template>
@@ -54,8 +58,8 @@ const props = defineProps({
                     <li class="px-[30px] pt-[15px] pb-[30px]">
                         <div class="h-[1px] border-t border-black/50"></div>
                     </li>
-                    <li class="px-[16px]">
-                        <TheLangSelector />
+                    <li class="px-[30px]">
+                        <TheLangSelector :onClick="closeMenu" />
                     </li>
                 </ul>
             </div>

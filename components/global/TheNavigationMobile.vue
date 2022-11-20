@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { useFocusTrap } from '@vueuse/integrations/useFocusTrap';
 import { onKeyStroke } from '@vueuse/core';
 
@@ -67,7 +67,7 @@ router.beforeEach(() => closeSecuence());
     <nav ref="naviation_menu">
         <!-- nav bar -->
         <div
-            class="px-[30px] py-[16px] flex items-center justify-between relative z-50 bg-white"
+            class="px-[30px] py-[16px] flex items-center justify-between relative z-10 bg-white"
             :class="{ 'fixed top-0 left-0 w-full': !isMenuOpen || isMenuOpen }"
         >
             <TheLogo />
@@ -85,6 +85,7 @@ router.beforeEach(() => closeSecuence());
                 :links="links"
                 :externalLink="externalLink"
                 :controlsId="controlsId"
+                @close="closeSecuence"
             />
         </div>
     </nav>

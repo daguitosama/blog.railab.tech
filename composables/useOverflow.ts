@@ -3,7 +3,7 @@
  * @param {HTMLElement} domElelemtRef
  * @returns
  */
-export function useOverflow(domElelemtRef) {
+export function useOverflow(domElelemtRef?) {
     // client usage only
     if (typeof document == 'undefined') {
         return {

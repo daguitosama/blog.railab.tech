@@ -1,7 +1,7 @@
-<script>
-export default {
-    setup(props) {},
-};
+<script setup>
+definePageMeta({
+    layout: 'blog',
+});
 </script>
 
 <template>

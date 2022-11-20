@@ -4,6 +4,7 @@
  */
 
 import { computed } from '@vue/reactivity';
+import TheLangSelectorMenu from '../components/global/TheLangSelectorMenu.vue';
 
 // i18n metadata
 // https://v8.i18n.nuxtjs.org/guide/seo/
@@ -94,6 +95,7 @@ function onError(error) {
                 <Body>
                     <!-- TODO hydrate with real content :navigation_data="navigation_data" -->
                     <TheNavigationProvider />
+                    <!-- <TheLangSelectorMenu /> -->
 
                     <slot />
                 </Body>
