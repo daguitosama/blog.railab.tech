@@ -22,15 +22,17 @@ const props = defineProps({
         ],
     },
     externalLink: {
-        text: 'Go to Railab',
-        url: 'https://railab.tech',
+        type: Object,
+        default: () => ({
+            text: 'Go to Railab',
+            url: 'https://railab.tech',
+        }),
     },
 });
 </script>
 
 <template>
-    <!-- <NuxtLink :to="localePath('/')"> home </NuxtLink> -->
-    <header class="">
+    <header class="max-w-screen-xl mx-auto">
         <TheNavigationMobile
             :links="links"
             :externalLink="externalLink"
