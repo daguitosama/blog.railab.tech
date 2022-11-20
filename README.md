@@ -1,6 +1,21 @@
-# Railab Blog
+# The Railab Blog
+
+<img src="./capture.png" width="250px" />
+
+
+## About
+This project has been planed using Obsidian, built with the Nuxt 3 framework, TailwindCSS, designed on Figma [see prototype](https://www.figma.com/proto/pVXX2U1TjvpfwLzVOexRW1/blog.railab.tech?page-id=125%3A1689&node-id=125%3A2086&viewport=-55%2C420%2C0.11&scaling=scale-down). And it will be deployed on Cloudflare Workers as a server side rendered site.
+
+The content hydration strategy is to use custom fetch calls to the Storyblok GraphQL api on page request, and populate a shared content state reference usign the new `useState` hook of Nuxt 3. this way every component can grab the data it need's on this object repository.
+
+It will support internationalization, Espanish as default language and English, using the `nuxti18n` module, currently on beta, but working properly.
+
+
+
 
 ## Content Types
+Content types are described on `GraphQL` as it's a simpler format to communicate easily & precisly the types. All though internally actual content api calls might diverge while using the Stroyblok graphql api.
+
 
 ```graphql
 
@@ -47,11 +62,46 @@ Page {
 
 ```
 
-### Stroyblock components content structure (contentSchema)
+### Components content structure (contentSchema)
+This is the actuall implementation details of the components content structure
 
-### Navigation
+### DefaultLayout
 ```js
-const navitation = {
+
+    i18nMetadata: {
+        lang,
+        dir
+        alternateLinks
+        ogLang
+    }
+
+    pageMetadata :{
+        title,
+        description,
+        ogTitle,
+        ogDescription,
+        ogImage,
+        ogSiteName,
+        ogUrl,
+        twitterCard,
+        twitterTitle,
+        twitterSite
+    }
+
+```
+#### Storyblok Specifics
+```js
+    PageMetadata :{
+        title,
+        description,
+        image
+    }
+```
+
+### TheNavigation
+The navigation data will be embeded on source leveraging nuxti18n content api.
+```js
+{
     links : [
         {
             text: 'Home',,
@@ -77,13 +127,8 @@ const navitation = {
 }
 ```
 
-#### Page_Metadata
+### LangSelector
 
-```js
-    title: '',
-    description: ''
-    image: ''
-```
 
 
 ## Hot Zone
