@@ -13,17 +13,19 @@ const focus_trap_container = ref();
 const { activate, deactivate } = useFocusTrap(focus_trap_container);
 
 watch(
-    () => props,
+    props,
+    // this callback it's runing before component updates, osea, there is no focus_trap_container avaible yet
+    // that's what wee need wait this component has been updated
+    // for some extrange reason the { flush: 'post'} watch config does not do the job
     async (newProps, oldProps) => {
         if (newProps.show) {
-            await wait(0.1);
+            await wait(0.01);
             activate();
         } else {
-            await wait(0.1);
+            await wait(0.01);
             deactivate();
         }
-    },
-    { flush: 'post' }
+    }
 );
 </script>
 
