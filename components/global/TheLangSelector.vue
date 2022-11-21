@@ -1,5 +1,4 @@
 <script setup>
-import { useFocusTrap } from '@vueuse/integrations/useFocusTrap';
 import WorldIcon from '~/components/icons/WorldIcon.vue';
 import XIcon from '~/components/icons/XIcon.vue';
 import Modal from '~/components/utils/Modal.vue';
