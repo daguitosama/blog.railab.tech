@@ -12,7 +12,6 @@
     "story:preview": "histoire preview"
   },
   "devDependencies": {
-    "@headlessui/vue": "^1.7.4",
     "@histoire/plugin-nuxt": "^0.11.6",
     "@histoire/plugin-vue": "^0.11.6",
     "@nuxtjs/tailwindcss": "^6.1.3",
