@@ -59,7 +59,7 @@ function closeMenu() {
                         <div class="h-[1px] border-t border-black/50"></div>
                     </li>
                     <li class="px-[30px]">
-                        <TheLangSelectorNat :onClick="closeMenu" />
+                        <TheLangSelector :onClick="closeMenu" />
                     </li>
                 </ul>
             </div>
