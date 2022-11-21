@@ -13,7 +13,7 @@ const focus_trap_container = ref();
 const { activate, deactivate } = useFocusTrap(focus_trap_container);
 
 watch(
-    props,
+    () => props,
     async (newProps, oldProps) => {
         if (newProps.show) {
             await wait(0.1);
