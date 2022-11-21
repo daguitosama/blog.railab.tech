@@ -1,6 +1,4 @@
 <script setup>
-import XIcon from '~/components/icons/XIcon.vue';
-
 import {
     TransitionRoot,
     TransitionChild,
@@ -8,45 +6,18 @@ import {
     DialogPanel,
     DialogTitle,
 } from '@headlessui/vue';
-
 const isOpen = useLangSelectorState();
-
 function closeModal() {
     isOpen.value = false;
 }
-
-const { locale, locales } = useI18n();
-const availableLocales = computed(() =>
-    locales.value.filter((l) => l.code != locale.value)
-);
-
-// menu content
-const titles = {
-    en: 'Select your language',
-    es: 'Seleccione su lenguaje',
-};
-const title = computed(() => titles[locale.value]);
-const closeLabels = {
-    en: 'Close language selector',
-    es: 'Cerrar selector de lenguaje',
-};
-const closeLabel = computed(() => closeLabels[locale.value]);
-
-//
-// closing menu on route change
-// const router = useRouter();
-// router.beforeEach(() => {
-//     console.log('route change');
-//     if (isOpen.value) {
-//         closeModal();
-//     }
-// });
+function openModal() {
+    isOpen.value = true;
+}
 </script>
 
 <template>
-    <!-- menu -->
     <TransitionRoot appear :show="isOpen" as="template">
-        <Dialog as="div" @close="closeModal" class="relative z-50">
+        <Dialog as="div" @close="closeModal" class="relative z-10">
             <TransitionChild
                 as="template"
                 enter="duration-300 ease-out"
@@ -56,9 +27,7 @@ const closeLabel = computed(() => closeLabels[locale.value]);
                 leave-from="opacity-100"
                 leave-to="opacity-0"
             >
-                <div
-                    class="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-md"
-                />
+                <div class="fixed inset-0 bg-black bg-opacity-25" />
             </TransitionChild>
 
             <div class="fixed inset-0 overflow-y-auto">
@@ -77,41 +46,28 @@ const closeLabel = computed(() => closeLabels[locale.value]);
                         <DialogPanel
                             class="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all"
                         >
-                            <div class="flex justify-between align-top">
-                                <DialogTitle
-                                    as="h3"
-                                    class="text-2xl font-medium leading-6 text-gray-900"
-                                >
-                                    {{ title }}
-                                </DialogTitle>
-
-                                <button
-                                    type="button"
-                                    class="rounded-full p-[15px] -translate-y-[15px] translate-x-[15px] font-medium hover:bg-light-elevation focus:outline-none focus-visible:ring-2 focus-visible:ring-black"
-                                    @click="closeModal"
-                                >
-                                    <XIcon aria-hidden="true" />
-
-                                    <span class="sr-only">
-                                        {{ closeLabel }}
-                                    </span>
-                                </button>
+                            <DialogTitle
+                                as="h3"
+                                class="text-lg font-medium leading-6 text-gray-900"
+                            >
+                                Payment successful
+                            </DialogTitle>
+                            <div class="mt-2">
+                                <p class="text-sm text-gray-500">
+                                    Your payment has been successfully
+                                    submitted. We’ve sent you an email with all
+                                    of the details of your order.
+                                </p>
                             </div>
 
-                            <div class="mt-[40px]">
-                                <ul class="flex flex-col gap-[12px]">
-                                    <li
-                                        v-for="locale in availableLocales"
-                                        :key="locale.code"
-                                        @click="() => console.log('click')"
-                                    >
-                                        <NuxtLink
-                                            :to="switchLocalePath(locale.code)"
-                                            class="w-full block border-black/40 border rounded-xl p-[15px] focus:outline-none focus-visible:ring-2 focus-visible:ring-black"
-                                            >{{ locale.name }} foo</NuxtLink
-                                        >
-                                    </li>
-                                </ul>
+                            <div class="mt-4">
+                                <button
+                                    type="button"
+                                    class="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                                    @click="closeModal"
+                                >
+                                    Got it, thanks!
+                                </button>
                             </div>
                         </DialogPanel>
                     </TransitionChild>
