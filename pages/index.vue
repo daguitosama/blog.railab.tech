@@ -20,8 +20,18 @@ await useAsyncData('home-content', async () => {
         console.log(error);
     }
 });
+
+// temp state for component crafting
+const state = reactive({
+    intro: {
+        heading: 'The Railab Blog',
+        copy: 'Mac care and mantainance tutorials. Buying guides, news, tricks and much more.',
+    },
+});
 </script>
 
 <template>
-    <div class="bg-white w-full min-h-screen"></div>
+    <div class="bg-white w-full min-h-screen text-type-on-light-base">
+        <HomeIntro :heading="state.intro.heading" :copy="state.intro.copy" />
+    </div>
 </template>
