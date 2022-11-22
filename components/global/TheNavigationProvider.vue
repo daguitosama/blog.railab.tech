@@ -15,10 +15,10 @@ const navData = {
             text: { en: 'Topics', es: 'Temas' },
             route: '/topics',
         },
-        {
-            text: { en: 'Authors', es: 'Autores' },
-            route: '/authors',
-        },
+        // {
+        //     text: { en: 'Authors', es: 'Autores' },
+        //     route: '/authors',
+        // },
     ],
     externalLink: {
         text: { en: 'Go to Railab', es: 'Ir a Railab' },
