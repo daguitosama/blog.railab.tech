@@ -29,7 +29,7 @@ const route = useRoute();
         >
             <NuxtLink
                 :to="localePath(link.route)"
-                class="px-[16px] py-[10px] focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-4 focus-visible:ring-black rounded-lg text-type-on-light-base hover:text-primary-on-light-base hover:underline active:text-primary-on-light-base"
+                class="font-bespoke px-[16px] py-[10px] focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-4 focus-visible:ring-black rounded-lg text-type-on-light-base hover:text-primary-on-light-base hover:underline active:text-primary-on-light-base"
                 :class="{
                     'underline text-primary-on-light-base ':
                         route.path.endsWith('/') && route.path.length > 1
@@ -44,7 +44,7 @@ const route = useRoute();
         <li class="relative flex items-center justify-center">
             <a
                 :href="externalLink.route"
-                class="px-[16px] py-[10px] focus:oEutline-none focus-visible:ring-2 focus-visible:ring-offset-4 focus-visible:ring-black rounded-lg text-type-on-light-base hover:text-primary-on-light-base hover:underline active:text-primary-on-light-base cursor-pointer"
+                class="font-bespoke px-[16px] py-[10px] focus:oEutline-none focus-visible:ring-2 focus-visible:ring-offset-4 focus-visible:ring-black rounded-lg text-type-on-light-base hover:text-primary-on-light-base hover:underline active:text-primary-on-light-base cursor-pointer"
                 :data-text="externalLink.text"
             >
                 {{ externalLink.text }}
