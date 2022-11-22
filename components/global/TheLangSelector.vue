@@ -57,9 +57,12 @@ const closeLabel = computed(() => closeLabels[locale.value]);
         @click="onBTNClick()"
         :aria-label="label"
         aria-controls="lang-menu-selector"
-        class="px-[15px] py-[10px] rounded-lg flex items-center justify-between gap-[12px] text-sm border border-black focus-visible:outline focus-visible:ring-offset-2 focus-visible:ring-black focus-visible:ring-2 hover:bg-light-elevation focus:bg-light-elevation transition-all duration-200"
+        class="px-[15px] py-[10px] rounded-lg flex items-center justify-between gap-[12px] text-sm border border-slate-300 focus-visible:outline focus-visible:ring-offset-2 focus-visible:ring-black focus-visible:ring-2 hover:bg-light-elevation focus:bg-light-elevation transition-all duration-200"
     >
-        <WorldIcon class="" aria-hidden="true" />
+        <WorldIcon
+            class="text-type-on-light-base text-opacity-90"
+            aria-hidden="true"
+        />
         <span>{{ localeProperties.name }}</span>
     </button>
 
