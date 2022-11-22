@@ -34,7 +34,7 @@ function closeMenu() {
             leaveToClass="-translate-x-[100%]"
         >
             <div
-                class="fixed inset-0 w-full h-full bg-white py-[80px] overflow-y-auto"
+                class="fixed inset-0 w-full h-full bg-white/80 backdrop-blur-md py-[80px] overflow-y-auto"
                 v-show="isOpen"
             >
                 <ul :id="controlsId" class="pt-[40px] grid gap-[10px]">
