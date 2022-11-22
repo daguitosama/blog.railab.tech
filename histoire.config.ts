@@ -4,5 +4,14 @@ import { HstNuxt } from '@histoire/plugin-nuxt';
 
 export default defineConfig({
     plugins: [HstVue(), HstNuxt()],
-    storyMatch: ['components/**/*.vue'],
+    vite: {
+        server: {
+            port: 3000,
+            hmr: {
+                overlay: false,
+            },
+        },
+    },
+    setupFile: './historie.setup.ts',
+    // storyMatch: ['components/**/*.story.vue'],
 });
