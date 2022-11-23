@@ -1,10 +1,11 @@
-# The Railab Blog
+# The Railab Blog 
+[Live preview](https://blog.railabtech.workers.dev/)
 
 <img src="./capture.png" width="250px" />
 
 
 ## About
-This project has been planed using Obsidian, built with the Nuxt 3 framework, (partly to use and learn all is new features); TailwindCSS, designed on Figma [see prototype](https://www.figma.com/proto/pVXX2U1TjvpfwLzVOexRW1/blog.railab.tech?page-id=125%3A1689&node-id=125%3A2086&viewport=-55%2C420%2C0.11&scaling=scale-down). It has been crafted with a [Component Driven Design](https://www.componentdriven.org), usign the new [Historie](https://histoire.dev/) vue components story book...from the Figma file to the  Story component. It will be deployed on Cloudflare Workers as a server side rendered site.
+This project has been planed using Obsidian, built with the Nuxt 3 framework, (partly to use and learn all is new features); TailwindCSS, designed on Figma [see prototype](https://www.figma.com/proto/pVXX2U1TjvpfwLzVOexRW1/blog.railab.tech?page-id=125%3A1689&node-id=125%3A2086&viewport=-55%2C420%2C0.11&scaling=scale-down). It has been crafted with a [Component Driven Development](https://www.componentdriven.org), usign the new [Historie](https://histoire.dev/) vue components story book...from the Figma file to the  Story component. It will be deployed on Cloudflare Workers as a server side rendered site.
 
 
 The content hydration strategy is to use custom fetch calls to the Storyblok GraphQL api on page request, and populate a shared content state reference usign the new `useState` hook of Nuxt 3. this way every component can grab the data it need's on this object repository. Why, well native `nuxt/storyblok` it's nice but it's a litle bit bloated, this project it's taking Nuxt 3 for a ride, experimenting how much performant can it get, so just minimal dependencies allowed. 

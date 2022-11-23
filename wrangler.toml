@@ -1,8 +1,8 @@
-name = "blog-railab-tech"
+name = "blog"
 main = "./.output/server/index.mjs"
 workers_dev = true
 compatibility_date = "2022-09-10"
-account_id = "3461c25499f09894cabbcdc181f62234"
+account_id = "8f61fc19a5c9b5668673f6b1415f9789"
 
 
 [site]
