@@ -91,8 +91,9 @@ function onError(error) {
                     <Meta property="twitter:site" :content="twitterSite" />
                 </Head>
 
-                <Body>
-                    <!-- TODO hydrate with real content :navigation_data="navigation_data" -->
+                <Body
+                    class="antialiased bg-white dark:bg-zinc-800 text-type-on-light-base dark:text-type-on-dark-base transition-all duration-300"
+                >
                     <TheNavigationProvider />
 
                     <slot />
