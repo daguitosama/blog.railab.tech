@@ -4,6 +4,7 @@ const twColors = require('tailwindcss/colors');
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [],
+    darkMode: 'class',
     theme: {
         colors: {
             // tw colors
@@ -15,6 +16,9 @@ module.exports = {
                     light: {
                         base: '#2563EB',
                     },
+                    dark: {
+                        base: '#60a5fa',
+                    },
                 },
             },
             type: {
@@ -22,6 +26,9 @@ module.exports = {
                     light: {
                         base: '#292929',
                         dimmed: '#757575',
+                    },
+                    dark: {
+                        base: '#E3E8EF',
                     },
                 },
             },
