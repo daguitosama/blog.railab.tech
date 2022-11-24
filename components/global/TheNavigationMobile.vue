@@ -70,7 +70,7 @@ router.beforeEach(() => closeSecuence());
     <nav ref="naviation_menu">
         <!-- nav bar -->
         <div
-            class="px-[30px] py-[16px] flex items-center justify-between relative z-10 bg-white"
+            class="px-[30px] py-[16px] flex items-center justify-between relative z-10 bg-white dark:bg-surface-dark-base transition-all duration-300"
             :class="{ 'fixed top-0 left-0 w-full': !isMenuOpen || isMenuOpen }"
         >
             <TheLogo />

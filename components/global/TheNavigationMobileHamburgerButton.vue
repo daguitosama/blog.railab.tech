@@ -3,7 +3,7 @@
         :aria-controls="controlsId"
         :aria-expanded="isOpen"
         @click="handleClick"
-        class="w-[40px] h-[40px] rounded-full flex items-center justify-center focus:bg-slate-100 focus-visible:ring-2 focus-visible:ring-black focus:outline-none"
+        class="w-[40px] h-[40px] rounded-full flex items-center justify-center focus:outline-none hover:bg-slate-100 dark:hover:bg-surface-dark-elevation focus-visible:ring-2 focus-visible:ring-black dark:focus-visible:ring-white focus-visible:bg-surface-light-base dark:focus-visible:bg-surface-dark-elevation"
     >
         <!-- label -->
         <span class="sr-only" v-if="isOpen"> {{ label.when_open }} </span>
@@ -15,7 +15,7 @@
             class="relative mx-auto w-[24px] h-[24px] flex flex-col items-center justify-center"
         >
             <div
-                class="w-[16px] h-[2px] rounded-lg bg-black/80 absolute transition-transform duration-300 ease-[cubic-bezier(0.52,0.16,0.52,0.84)]"
+                class="w-[16px] h-[2px] rounded-lg bg-black/80 dark:bg-white absolute transition-transform duration-300 ease-[cubic-bezier(0.52,0.16,0.52,0.84)]"
                 :class="{
                     'rotate-45  translate-y-[0px]': isOpen,
                     '-translate-y-[3px]': !isOpen,
@@ -24,7 +24,7 @@
 
             <div
                 v-if="true"
-                class="w-[16px] h-[2px] rounded-lg bg-black/80 absolute transition-transform duration-300 ease-[cubic-bezier(0.52,0.16,0.52,0.84)]"
+                class="w-[16px] h-[2px] rounded-lg bg-black/80 dark:bg-white absolute transition-transform duration-300 ease-[cubic-bezier(0.52,0.16,0.52,0.84)]"
                 :class="{
                     '-rotate-45 translate-y-[0px]': isOpen,
                     'translate-y-[3px]': !isOpen,
