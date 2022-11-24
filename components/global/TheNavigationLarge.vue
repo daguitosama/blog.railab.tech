@@ -16,11 +16,23 @@ const props = defineProps({
     <nav ref="naviation_menu">
         <!-- nav bar -->
         <div
-            class="px-[30px] py-[30px] lg:px-[50px] flex items-baseline justify-between relative z-50 bg-white"
+            class="px-[30px] py-[30px] lg:px-[50px] grid grid-cols-3 relative z-10 bg-white"
         >
-            <TheLogo />
+            <div class="border-black flex items-center">
+                <TheLogo />
+            </div>
 
-            <NavigationLargeMenu :links="links" :externalLink="externalLink" />
+            <div class="border-black flex items-center justify-center">
+                <NavigationLargeMenu
+                    :links="links"
+                    :externalLink="externalLink"
+                />
+            </div>
+
+            <div class="border-black flex items-center justify-end">
+                <TheLangSelector :showBorders="false" iconClasses="w-4 h-4" />
+                <TheColorSelector :showBorders="false" class="ml-[8px]" />
+            </div>
         </div>
     </nav>
 </template>

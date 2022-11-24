@@ -56,7 +56,7 @@ function closeMenu() {
                     </template>
 
                     <li class="px-[30px] pt-[15px] pb-[30px]">
-                        <div class="h-[1px] border-t border-slate-500/20"></div>
+                        <!-- <div class="h-[1px] border-t border-slate-400/20"></div> -->
                     </li>
                     <li class="px-[30px]">
                         <TheLangSelector :onClick="closeMenu" />
