@@ -1,6 +1,7 @@
 import { defineConfig } from 'histoire';
 import { HstVue } from '@histoire/plugin-vue';
 import { HstNuxt } from '@histoire/plugin-nuxt';
+import nuxti18n from '@nuxtjs/i18n';
 
 export default defineConfig({
     plugins: [HstVue(), HstNuxt()],
