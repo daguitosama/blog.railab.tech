@@ -33,7 +33,7 @@ watch(
     <Teleport to="body">
         <Transition>
             <div
-                v-show="show"
+                v-if="show"
                 ref="focus_trap_container"
                 role="dialog"
                 class="px-6 fixed inset-0 w-full flex items-center justify-center z-20"
