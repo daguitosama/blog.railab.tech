@@ -2,6 +2,8 @@
 import WorldIcon from '~/components/icons/WorldIcon.vue';
 import XIcon from '~/components/icons/XIcon.vue';
 import Modal from '~/components/utils/Modal.vue';
+import { onKeyStroke } from '@vueuse/core';
+
 // props
 const props = defineProps({
     onClick: {
@@ -56,6 +58,13 @@ const closeLabels = {
 const closeLabel = computed(() => closeLabels[locale.value]);
 
 //
+
+// key strokes
+onKeyStroke('Escape', (e) => {
+    if (isOpen.value) {
+        closeModal();
+    }
+});
 </script>
 
 <template>
