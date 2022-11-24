@@ -89,21 +89,26 @@ onKeyStroke('Escape', (e) => {
     <Modal :show="isOpen" @close="closeModal">
         <div
             id="lang-menu-selector"
-            class="w-full max-w-xl mx-auto transform overflow-hidden rounded-2xl bg-white p-[30px] shadow-xl transition-all"
+            class="relative w-full max-w-xl mx-auto p-[30px] overflow-hidden rounded-2xl bg-surface-light-base dark:bg-surface-dark-base shadow-xl transition-all duration-300"
         >
-            <div class="flex flex-col items-start">
-                <button
-                    type="button"
-                    class="rounded-full p-[15px] -translate-x-[15px] font-medium hover:bg-light-elevation focus:outline-none focus-visible:ring-2 focus-visible:ring-black transition-all duration-150"
-                    @click="closeModal"
-                >
-                    <XIcon aria-hidden="true" />
+            <!-- close btn (x) -->
+            <button
+                type="button"
+                class="absolute right-0 top-0 rounded-full p-[15px] -translate-x-[10px] translate-y-[10px] font-medium hover:bg-light-elevation dark:hover:bg-surface-dark-elevation focus:outline-none focus-visible:ring-2 focus-visible:ring-black dark:focus-visible:ring-surface-light-base transition-all duration-300"
+                @click="closeModal"
+            >
+                <XIcon
+                    aria-hidden="true"
+                    class="text-type-on-light-base dark:text-white"
+                />
 
-                    <span class="sr-only">
-                        {{ closeLabel }}
-                    </span>
-                </button>
-                <h3 class="mt-5 text-3xl md:text-4xl font-medium">
+                <span class="sr-only">
+                    {{ closeLabel }}
+                </span>
+            </button>
+
+            <div class="mt-[18px]">
+                <h3 class="text-2xl md:text-3xl font-medium">
                     {{ title }}
                 </h3>
             </div>
@@ -113,7 +118,7 @@ onKeyStroke('Escape', (e) => {
                         <NuxtLink
                             @click.native="closeModal"
                             :to="switchLocalePath(locale.code)"
-                            class="w-full block border-black/40 border rounded-xl p-[15px] focus:outline-none focus-visible:ring-2 focus-visible:ring-black transition-all duration-150"
+                            class="w-full block border-slate-700 dark:border-zinc-600 border rounded-xl p-[15px] focus:outline-none focus-visible:ring-2 focus-visible:ring-black dark:focus-visible:ring-white hover:bg-surface-light-elevation dark:hover:bg-surface-dark-elevation transition-all duration-300"
                             >{{ locale.name }}</NuxtLink
                         >
                     </li>
