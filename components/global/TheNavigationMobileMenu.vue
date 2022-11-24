@@ -27,20 +27,22 @@ function closeMenu() {
 <template>
     <div>
         <Transition
-            enterFromClass="-translate-x-[100%]"
-            enterActiveClass="transition-transform duration-300"
-            enterToClass="translate-x-[0&]"
-            leaveActiveClass="transition-transform duration-300"
-            leaveToClass="-translate-x-[100%]"
+            enterFromClass="-translate-y-[100%] "
+            enterActiveClass="transition-all duration-500"
+            enterToClass="translate-y-[0%] "
+            leave-from-class="translate-y-[0%] "
+            leaveActiveClass="transition-all duration-500"
+            leaveToClass="-translate-y-[100%] "
         >
             <div
-                class="fixed inset-0 w-full h-full bg-white/80 dark:bg-surface-dark-base/80 backdrop-blur-md py-[80px] overflow-y-auto"
+                class="fixed inset-0 w-full h-full bg-white dark:bg-surface-dark-base py-[80px] overflow-y-auto transition-all duration-300"
                 v-show="isOpen"
             >
                 <ul :id="controlsId" class="pt-[40px] grid gap-[10px]">
-                    <template v-for="link in links">
+                    <template v-for="(link, index) in links" :key="index">
                         <!-- isCurrent: case when route ends with '/' or not and is just '/' -->
                         <NavigationMobileMenuLink
+                            class="flex justify-center"
                             :link="link"
                             :isReachable="isOpen ? true : false"
                             :isCurrent="
@@ -55,11 +57,30 @@ function closeMenu() {
                         />
                     </template>
 
-                    <li class="px-[30px] pt-[15px] pb-[30px]">
-                        <!-- <div class="h-[1px] border-t border-slate-400/20"></div> -->
-                    </li>
-                    <li class="px-[30px]">
-                        <TheLangSelector :onClick="closeMenu" />
+                    <li
+                        class="mt-[15px] px-[30px] flex items-start justify-center"
+                    >
+                        <Transition
+                            enter-from-class="opacity-0 scale-0"
+                            enter-active-class="transition-all duration-500 delay-200"
+                            enter-to-class="opacity-100 scale-100"
+                        >
+                            <div v-show="isOpen">
+                                <TheLangSelector :onClick="closeMenu" />
+                            </div>
+                        </Transition>
+                        <Transition
+                            enter-from-class="opacity-0 scale-0"
+                            enter-active-class="transition-all duration-500 delay-300"
+                            enter-to-class="opacity-100 scale-100"
+                        >
+                            <div v-show="isOpen">
+                                <TheColorSelector
+                                    class="ml-4"
+                                    :show-borders="true"
+                                />
+                            </div>
+                        </Transition>
                     </li>
                 </ul>
             </div>
