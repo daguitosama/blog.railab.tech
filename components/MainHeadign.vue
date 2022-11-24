@@ -19,9 +19,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <h1
-        class="font-bespoke text-type-on-light-base font-bold text-4xl sm:text-5xl md:text-6xl"
-    >
+    <h1 class="font-bespoke font-bold text-4xl sm:text-5xl md:text-6xl">
         {{ text }}
     </h1>
 </template>
