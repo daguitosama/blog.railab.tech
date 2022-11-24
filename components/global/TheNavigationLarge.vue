@@ -16,7 +16,7 @@ const props = defineProps({
     <nav ref="naviation_menu">
         <!-- nav bar -->
         <div
-            class="px-[30px] py-[30px] lg:px-[50px] grid grid-cols-3 relative z-10 bg-white"
+            class="px-[30px] py-[30px] lg:px-[50px] grid grid-cols-3 relative z-10 transition-all duration-300"
         >
             <div class="border-black flex items-center">
                 <TheLogo />
