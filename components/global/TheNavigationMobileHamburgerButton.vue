@@ -3,7 +3,7 @@
         :aria-controls="controlsId"
         :aria-expanded="isOpen"
         @click="handleClick"
-        class="w-[40px] h-[40px] rounded-lg flex items-center justify-center focus:bg-slate-100 focus:ring-2 focus:ring-black focus:outline-none"
+        class="w-[40px] h-[40px] rounded-full flex items-center justify-center focus:bg-slate-100 focus:ring-2 focus:ring-black focus:outline-none"
     >
         <!-- label -->
         <span class="sr-only" v-if="isOpen"> {{ label.when_open }} </span>
