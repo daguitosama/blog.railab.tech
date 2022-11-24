@@ -64,13 +64,13 @@ const closeLabel = computed(() => closeLabels[locale.value]);
         @click="onBTNClick()"
         :aria-label="label"
         aria-controls="lang-menu-selector"
-        class="h-[40px] w-[40px] rounded-full flex items-center justify-center text-sm focus-visible:outline focus-visible:ring-offset-2 focus-visible:ring-black focus-visible:ring-2 hover:bg-light-elevation focus:bg-light-elevation transition-all duration-200"
+        class="h-[40px] w-[40px] rounded-full flex items-center justify-center text-sm focus-visible:outline focus-visible:ring-offset-2 focus-visible:ring-black focus-visible:ring-2 hover:bg-light-elevation dark:hover:bg-zinc-900 focus:bg-light-elevation dark:focus:bg-zinc-900 transition-all duration-300"
         :class="{
             'border-slate-700 border-2 ': showBorders,
         }"
     >
         <WorldIcon
-            class="text-type-on-light-base text-opacity-90"
+            class="text-type-on-light-base dark:text-type-on-dark-base text-opacity-90"
             :class="iconClasses"
             aria-hidden="true"
         />
