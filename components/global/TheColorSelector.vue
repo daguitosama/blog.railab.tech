@@ -63,9 +63,9 @@ function onBTNClick() {
     <button
         @click="onBTNClick()"
         aria-controls="lang-menu-selector"
-        class="h-[40px] w-[40px] rounded-full flex items-center justify-center text-sm focus-visible:outline focus-visible:ring-offset-2 focus-visible:ring-black focus-visible:ring-2 hover:bg-light-elevation dark:hover:bg-zinc-900 focus:bg-light-elevation dark:focus:bg-zinc-900 transition-all duration-200"
+        class="h-[40px] w-[40px] rounded-full flex items-center justify-center text-sm focus-visible:outline focus-visible:ring-offset-2 dark:focus-visible:ring-offset-surface-dark-base focus-visible:ring-black dark:focus-visible:ring-white focus-visible:ring-2 hover:bg-light-elevation dark:hover:bg-zinc-900 focus:bg-light-elevation dark:focus:bg-zinc-900 transition-all duration-300"
         :class="{
-            'border-slate-700 border-2 ': showBorders,
+            'border-2 border-slate-700 dark:border-white ': showBorders,
         }"
     >
         <!-- do -->
