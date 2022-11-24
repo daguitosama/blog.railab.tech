@@ -2,7 +2,6 @@
 import SunIcon from '~/components/icons/SunIcon.vue';
 import MoonIcon from '~/components/icons/MoonIcon.vue';
 import ComputerIcon from '~/components/icons/ComputerIcon.vue';
-// TODO  wire up labels
 // props
 const props = defineProps({
     onClick: {
@@ -35,21 +34,28 @@ function changeColorScheme() {
 
 // i18n labels
 const labels = {
-    es: 'Cambiar el esquema de color.',
-    en: 'Change color scheme .',
+    es: 'Cambiar el esquema de color. ',
+    en: 'Change color scheme. ',
 };
 const color_scheme_keys = {
     en: {
-        system: 'System',
-        light: 'Light',
-        dark: 'Dark',
+        system: 'Currently using System scheme',
+        light: 'Currently using Light scheme',
+        dark: 'Currently using Dark scheme',
     },
-    en: {
-        system: 'Sistema',
-        light: 'Claro',
-        dark: 'Obscuro',
+    es: {
+        system: 'Actualmente usando el esquema del Sistema',
+        light: 'Actualmente usando  el esquema Claro',
+        dark: 'Actualmente usando  el esquema Obscuro',
     },
 };
+
+const { locale } = useI18n();
+const label = computed(
+    () =>
+        labels[locale.value] +
+        color_scheme_keys[locale.value][colorMode.preference]
+);
 
 // fn
 function onBTNClick() {
@@ -62,7 +68,7 @@ function onBTNClick() {
     <!-- :aria-label="label" -->
     <button
         @click="onBTNClick()"
-        aria-controls="lang-menu-selector"
+        :aria-label="label"
         class="h-[40px] w-[40px] rounded-full flex items-center justify-center text-sm focus-visible:outline focus-visible:ring-offset-2 dark:focus-visible:ring-offset-surface-dark-base focus-visible:ring-black dark:focus-visible:ring-white focus-visible:ring-2 hover:bg-light-elevation dark:hover:bg-zinc-900 focus:bg-light-elevation dark:focus:bg-zinc-900 transition-all duration-300"
         :class="{
             'border-2 border-slate-700 dark:border-white ': showBorders,
