@@ -21,8 +21,8 @@ const navData = {
         // },
     ],
     externalLink: {
-        text: { en: 'Go to Railab', es: 'Ir a Railab' },
-        url: 'https://railab.tech',
+        text: { en: 'Railab', es: 'Railab' },
+        route: 'https://railab.tech',
     },
 };
 const links = computed(() => mapLinks(locale.value));

@@ -21,7 +21,7 @@ const route = useRoute();
 </script>
 
 <template>
-    <ul class="text-sm flex items-center justify-center">
+    <ul class="text-sm flex items-center">
         <li
             v-for="(link, index) in links"
             :key="index"
