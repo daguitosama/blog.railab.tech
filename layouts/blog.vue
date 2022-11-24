@@ -92,7 +92,7 @@ function onError(error) {
                 </Head>
 
                 <Body
-                    class="antialiased bg-white dark:bg-zinc-800 text-type-on-light-base dark:text-type-on-dark-base transition-all duration-300"
+                    class="antialiased bg-surface-light-base dark:bg-surface-dark-base text-type-on-light-base dark:text-type-on-dark-base transition-all duration-300"
                 >
                     <TheNavigationProvider />
 
