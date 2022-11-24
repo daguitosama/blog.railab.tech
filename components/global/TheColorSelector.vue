@@ -2,7 +2,7 @@
 import SunIcon from '~/components/icons/SunIcon.vue';
 import MoonIcon from '~/components/icons/MoonIcon.vue';
 import ComputerIcon from '~/components/icons/ComputerIcon.vue';
-// TODO remove telepor, wire up labels
+// TODO  wire up labels
 // props
 const props = defineProps({
     onClick: {
@@ -19,7 +19,6 @@ const props = defineProps({
 
 // color schemes
 const colorMode = useColorMode();
-console.log({ preference: colorMode.preference });
 const availableSchemes = ['system', 'light', 'dark'];
 
 function changeColorScheme() {
