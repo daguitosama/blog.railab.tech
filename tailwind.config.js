@@ -32,6 +32,16 @@ module.exports = {
                     },
                 },
             },
+            surface: {
+                light: {
+                    base: '#fff',
+                    elevation: '#E6E6E6',
+                },
+                dark: {
+                    base: twColors.zinc[800],
+                    elevation: twColors.zinc[900],
+                },
+            },
             light: {
                 base: '#fff',
                 elevation: '#E6E6E6',
