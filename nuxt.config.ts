@@ -8,7 +8,7 @@ export default defineNuxtConfig({
         /* Fonts */
         '~/assets/css/fonts.css',
     ],
-    modules: ['@nuxtjs/i18n', '@nuxtjs/tailwindcss'],
+    modules: ['@nuxtjs/i18n', '@nuxtjs/tailwindcss', '@nuxtjs/color-mode'],
 
     i18n: {
         baseUrl: process.env.ORIGIN ? process.env.ORIGIN : 'https://localhost',
@@ -39,6 +39,9 @@ export default defineNuxtConfig({
             //     // file: 'es-ES.json',
             // },
         ],
+    },
+    colorMode: {
+        classSuffix: '',
     },
 
     runtimeConfig: {
