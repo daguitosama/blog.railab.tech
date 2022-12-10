@@ -10,7 +10,7 @@ const { version } = useContentVersion();
 
 await useAsyncData('home-content', async () => {
     try {
-        await fetchContent();
+        // await fetchContent();
     } catch (error) {
         // ups some error happen, one of the following:
         // net error
@@ -31,7 +31,14 @@ const state = reactive({
 </script>
 
 <template>
-    <div class="bg-white w-full min-h-screen text-type-on-light-base">
-        <HomeIntro :heading="state.intro.heading" :copy="state.intro.copy" />
+    <div
+        class="w-full min-h-screen text-type-on-light-base dark:text-[#E3E8EF]"
+    >
+        <main>
+            <HomeIntro
+                :heading="state.intro.heading"
+                :copy="state.intro.copy"
+            />
+        </main>
     </div>
 </template>

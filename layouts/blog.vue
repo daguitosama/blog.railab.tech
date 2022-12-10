@@ -3,8 +3,6 @@
  * I18n Meta Data
  */
 
-import { computed } from '@vue/reactivity';
-
 // i18n metadata
 // https://v8.i18n.nuxtjs.org/guide/seo/
 const head = useLocaleHead({

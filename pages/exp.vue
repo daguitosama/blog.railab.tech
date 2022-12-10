@@ -1,9 +1,9 @@
-<script setup>
-import TheLangSelector from '~/components/global/TheLangSelector.vue';
-</script>
+<script setup></script>
 
 <template>
-    <div class="w-full min-h-screen grid place-items-center">
-        <TheLangSelector />
+    <div class="w-full min-h-screen">
+        <div class="w-[375px]">
+            <MainHeading />
+        </div>
     </div>
 </template>

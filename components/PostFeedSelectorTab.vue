@@ -18,7 +18,7 @@ const props = defineProps({
     <div class="">
         <NuxtLink
             :to="localePath(tab.route)"
-            class="border border-black px-[16px] py-[10px] text-type-on-light-base"
+            class="px-[16px] py-[10px] text-type-on-light-base"
             :class="{
                 'text-primary-on-light-base border-b border-primary-on-light-base ':
                     isActive,
