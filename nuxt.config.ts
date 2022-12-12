@@ -4,6 +4,24 @@ export default defineNuxtConfig({
         inlineSSRStyles: true,
         // noScripts: true,
     },
+
+    // ------
+    // Use when importing nuxt recipes from GH
+    //
+    // layer doc: https://nuxt.com/docs/guide/going-further/layers#authoring-nuxt-layers
+    // extends: ['github:daguitosama/dagos-nuxt3-recipes'],
+    //
+    // fs tuning for remove 403: https://vitejs.dev/config/server-options.html#server-fs-allow
+    // vite: {
+    //     server: {
+    //         fs: {
+    //             // Allow serving files from one level up to the project root
+    //             allow: ['/private/var/folders/_s/'],
+    //         },
+    //     },
+    // },
+    // -------
+
     css: [
         /* Fonts */
         '~/assets/css/fonts.css',
@@ -53,5 +71,8 @@ export default defineNuxtConfig({
         },
         contentVersionSelectorPassword:
             process.env.CONTENT_VERSION_SELECTOR_PASSWORD || 'supper-foo-pass',
+    },
+    typescript: {
+        shim: false,
     },
 });

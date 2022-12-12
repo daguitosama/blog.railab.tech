@@ -31,14 +31,9 @@ const state = reactive({
 </script>
 
 <template>
-    <div
-        class="w-full min-h-screen text-type-on-light-base dark:text-[#E3E8EF]"
-    >
+    <div class="w-full min-h-screen text-type-on-light-base dark:text-[#E3E8EF]">
         <main>
-            <HomeIntro
-                :heading="state.intro.heading"
-                :copy="state.intro.copy"
-            />
+            <HomeIntro :heading="state.intro.heading" :copy="state.intro.copy" />
         </main>
     </div>
 </template>
