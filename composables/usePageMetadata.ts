@@ -1,47 +1,44 @@
-export function usePageMetadata(
+interface MetaKeys {
     /**
      * The Page title
      */
-    title: string,
+    title: string;
     /**
      * The Page description
      */
-    description: string,
+    description: string;
     /**
      * The image url to use in OG and friends
      */
-    image_url: string,
+    image_url: string;
     /**
      * The page's canonical url
      */
-    canonical_url: string
-) {
+    canonical_url: string;
+}
+
+export function usePageMetadata(data: MetaKeys) {
     const {
         public: { siteName, twitterSite },
     } = useRuntimeConfig();
 
-    /**
-     *  
-            <!-- Twitter -->
-            <Meta property="twitter:site" :content="twitterSite" />
-
-     */
+    // meta tags
     const meta_description = {
         name: 'description',
-        content: description,
+        content: data.description,
     };
     // og
     const og_title = {
         property: 'og:title',
-        content: title,
+        content: data.title,
     };
     const og_description = {
         name: 'og:description',
-        content: description,
+        content: data.description,
     };
     const og_image = {
         name: 'og:image',
-        content: image_url,
+        content: data.image_url,
     };
 
     const og_site_name = {
@@ -51,7 +48,7 @@ export function usePageMetadata(
 
     const og_url = {
         name: 'og:url',
-        content: canonical_url,
+        content: data.canonical_url,
     };
 
     // tw
@@ -62,12 +59,12 @@ export function usePageMetadata(
 
     const twitter_title = {
         name: 'twitter:title',
-        content: title,
+        content: data.title,
     };
 
     const twitter_image = {
         name: 'twitter:image',
-        content: image_url,
+        content: data.image_url,
     };
     const twitter_site = {
         name: 'twitter:site',
@@ -88,7 +85,7 @@ export function usePageMetadata(
     ];
 
     useHead({
-        title,
+        title: data.title,
         meta: metatags,
     });
 }
