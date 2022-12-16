@@ -16,19 +16,20 @@
     src: url('/fonts/Inter-italic-latin.var.woff2') format('woff2');
 }
 
+
 @font-face {
-    font-family: 'BespokeSerif var';
-    src: url('/fonts/BespokeSerif-Variable.woff2') format('woff2');
-    font-weight: 300 800;
+    font-family: 'Sentient Variable';
+    src: url('/fonts/Sentient-Variable.woff2') format('woff2');
+    font-weight: 200 700;
     font-display: swap;
     font-named-instance: 'Regular';
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'BespokeSerif var';
-    src: url('/fonts/BespokeSerif-VariableItalic.woff2') format('woff2');
-    font-weight: 300 800;
+    font-family: 'Sentient Variable';
+    src: url('/fonts/Sentient-VariableItalic.woff2') format('woff2');
+    font-weight: 200 700;
     font-display: swap;
     font-named-instance: 'Italic';
     font-style: italic;

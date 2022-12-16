@@ -56,7 +56,10 @@ module.exports = {
         extend: {
             fontFamily: {
                 sans: ['Inter var', ...defaultTheme.fontFamily.sans],
-                bespoke: ['BespokeSerif var', ...defaultTheme.fontFamily.sans],
+                sentient: [
+                    'Sentient Variable',
+                    ...defaultTheme.fontFamily.sans,
+                ],
                 //
                 // mono: ['Fira Code VF', ...defaultTheme.fontFamily.mono],
                 // source: ['Source Sans Pro', ...defaultTheme.fontFamily.sans],
